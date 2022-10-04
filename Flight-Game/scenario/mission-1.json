@@ -1,0 +1,164 @@
+{
+    "terrain": "England",
+    "time": "09:00",
+    "weather": "clear",
+    "vehicles": ["XF-0", "XF-0-B"],
+    "playerAircraft": "XF-0",
+    "units": [
+        {
+            "id": "enemy-unit",
+            "iff": 2,
+            "vehicleId": "XF-0-B",
+            "position": {
+                "x": 100.0,
+                "y": 3000.0,
+                "z": 1000.0
+            }
+        },
+        {
+            "id": "enemy-unit-2",
+            "iff": 2,
+            "vehicleId": "XF-0-B",
+            "position": {
+                "x": 200.0,
+                "y": 3100.0,
+                "z": 1000.0
+            }
+        },
+        {
+            "id": "enemy-unit-3",
+            "iff": 2,
+            "vehicleId": "XF-0-B",
+            "position": {
+                "x": -100.0,
+                "y": 3000.0,
+                "z": -500.0
+            }
+        },
+        {
+            "id": "enemy-unit-4",
+            "iff": 2,
+            "vehicleId": "XF-0-B",
+            "position": {
+                "x": -200.0,
+                "y": 3100.0,
+                "z": -500.0
+            }
+        },
+        {
+            "id": "enemy-unit-5",
+            "iff": 2,
+            "vehicleId": "XF-0-B",
+            "position": {
+                "x": -200.0,
+                "y": 3500.0,
+                "z": -500.0
+            }
+        },
+        {
+            "id": "enemy-unit-6",
+            "iff": 2,
+            "vehicleId": "XF-0-B",
+            "position": {
+                "x": 200.0,
+                "y": 3500.0,
+                "z": -500.0
+            }
+        }
+    ],
+    "events": [
+        {
+            "id": "cutscene-1",
+            "type": "cutscene",
+            "cutsceneId": "mission-1-1",
+            "nextEvents": ["spawn-1"]
+        },
+        {
+            "id": "spawn-1",
+            "type": "spawn",
+            "actors": [
+                {
+                    "unitId": "player-unit",
+                    "position": "0.0, 0.0, -40.0",
+                    "heading": 0.0,
+                    "speed": 500
+                },
+                {
+                    "id": "enemy-bomber-unit-1",
+                    "unitId": "enemy-bomber-unit",
+                    "position": "0.0, 0.0, 0.0",
+                    "heading": 0.0,
+                    "speed": 500
+                },
+                {
+                    "id": "enemy-bomber-unit-2",
+                    "unitId": "enemy-bomber-unit",
+                    "position": "0.0, 0.0, 0.0",
+                    "heading": 0.0,
+                    "speed": 500
+                },
+                {
+                    "id": "enemy-bomber-unit-3",
+                    "unitId": "enemy-bomber-unit",
+                    "position": "0.0, 0.0, 0.0",
+                    "heading": 0.0,
+                    "speed": 500
+                }
+            ],
+            "nextEvents": ["destroy-all-targets", "time-elapse-1"] 
+        },
+        {
+            "id": "destroy-all-targets",
+            "type": "destroy-all-targets",
+            "nextEvents": ["cutscene-2"]
+        },
+        {
+            "id": "time-elapse-1",
+            "type": "time-elapse",
+            "time": "00:20:00",
+            "nextEvents": ["$FAIL$"]
+        },
+        {
+            "id": "cutscene-2",
+            "type": "cutscene",
+            "cutsceneId": "mission-1-2",
+            "nextEvents": ["reset"]
+        },
+        {
+            "id": "reset",
+            "type": "reset",
+            "nextEvents": ["spawn-2"]
+        },
+        {
+            "id": "spawn-2",
+            "type": "spawn",
+            "actors": [
+                {
+                    "unitId": "player-unit",
+                    "position": "-30000.0, 0.0, 0.0",
+                    "heading": "90"
+                },
+                {
+                    "unitId": "player-unit",
+                    "position": "-30000.0, 0.0, 0.0",
+                    "heading": "90"
+                }
+            ],
+            "nextEvents": ["reach-border", "time-elapse-2"] 
+        },
+        {
+            "id": "reach-border",
+            "type": "reach-border",
+            "direction": "east",
+            "margin": 5000,
+            "scenarioSuccess": true
+        },
+        {
+            "id": "time-elapse-2",
+            "type": "time-elapse",
+            "time": "00:05:00",
+            "scenarioFail": true
+        }
+    ],
+    "initialEvents": ["destroy-all-1", "time-elapsed-1"]
+}

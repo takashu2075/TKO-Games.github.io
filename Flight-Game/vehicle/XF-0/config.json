@@ -1,0 +1,31 @@
+{
+    "name": "XF-0",
+    "type": "aircraft",
+    "model": "model.glb",
+    "bodySize": {
+        "x": 7,
+        "y": 0.5,
+        "z": 7
+    },
+    "cameraPosition": {
+        "x": 0.0,
+        "y": 4.0,
+        "z": 15.0
+    },
+    "thrustForce": 0.3,
+    "brakeForce": 0.00001,
+    "liftForce": 0.01,
+    "pitchForce": 0.00005,
+    "rollForce": 0.0001,
+    "yawForce": 0.0001,
+    "linearDamping": {
+        "x": 0.9995,
+        "y": 0.9995,
+        "z": 0.9995
+    },
+    "angularDamping": {
+        "x": 0.97,
+        "y": 0.97,
+        "z": 0.97
+    }
+}

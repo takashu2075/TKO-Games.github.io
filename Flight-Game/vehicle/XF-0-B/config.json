@@ -1,0 +1,31 @@
+{
+    "name": "XF-0-B",
+    "type": "aircraft",
+    "model": "model.glb",
+    "bodySize": {
+        "x": 8,
+        "y": 8,
+        "z": 8
+    },
+    "cameraPosition": {
+        "x": 0.0,
+        "y": 4.0,
+        "z": 15.0
+    },
+    "thrustForce": 1.5,
+    "brakeForce": 0.001,
+    "liftForce": 1.0,
+    "pitchForce": 0.003,
+    "rollForce": 0.020,
+    "yawForce": 0.01,
+    "linearAirResistance": {
+        "x": 0.0003,
+        "y": 0.0003,
+        "z": 0.0003
+    },
+    "angularAirResistance": {
+        "x": 100.0,
+        "y": 100.0,
+        "z": 100.0
+    }
+}

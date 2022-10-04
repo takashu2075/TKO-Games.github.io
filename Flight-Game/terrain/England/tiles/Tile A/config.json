@@ -1,0 +1,8 @@
+{
+	"name": "Tile A",
+	"model": "model.glb",
+	"objects": [
+		"Tree",
+		"House"
+	]
+}
